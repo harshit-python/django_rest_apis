@@ -27,7 +27,7 @@ def article_list(request):
         return JsonResponse(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-@api_view(["GET", "PuT", "DELETE"])
+@api_view(["GET", "PUT", "DELETE"])
 def article_detail(request, pk):
     try:
         article = Article.objects.get(pk=pk)
